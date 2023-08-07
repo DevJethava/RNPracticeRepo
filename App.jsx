@@ -6,6 +6,7 @@ import GlobalScopApp from './src/globalscop/GlobalScopApp';
 import DataFetching from './src/usereducer_axios/DataFetching';
 import DataFetchingTwo from './src/usereducer_axios/DataFetchingTwo';
 import MemoCounter from './src/usememo/MemoCounter';
+import CallbackCounter from './src/usecallback/CallbackCounter';
 
 const App = () => {
     return (
@@ -13,7 +14,8 @@ const App = () => {
             {/* <GlobalScopApp /> */}
             {/* <DataFetching /> */}
             {/* <DataFetchingTwo /> */}
-            <MemoCounter />
+            {/* <MemoCounter /> */}
+            <CallbackCounter />
         </>
     );
 }

@@ -1,0 +1,37 @@
+import React from 'react';
+import {
+    Button,
+    StyleSheet,
+} from 'react-native';
+
+const MyButton = ({ onPress, id, title }) => {
+    console.log(`Rendering Button - ${id}`)
+    return (
+        <Button title={title} onPress={onPress} />
+    )
+}
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        backgroundColor: '#FFFFFF'
+    },
+    sectionContainer: {
+        marginTop: 32,
+        paddingHorizontal: 24,
+    },
+    sectionTitle: {
+        fontSize: 24,
+        fontWeight: '600',
+    },
+    sectionDescription: {
+        marginTop: 8,
+        fontSize: 18,
+        fontWeight: '400',
+    },
+    highlight: {
+        fontWeight: '700',
+    },
+});
+
+export default MyButton;
