@@ -3,11 +3,15 @@ import {
     StyleSheet,
 } from 'react-native';
 import GlobalScopApp from './src/globalscop/GlobalScopApp';
+import DataFetching from './src/usereducer_axios/DataFetching';
+import DataFetchingTwo from './src/usereducer_axios/DataFetchingTwo';
 
 const App = () => {
     return (
         <>
-            <GlobalScopApp />
+            {/* <GlobalScopApp /> */}
+            {/* <DataFetching /> */}
+            <DataFetchingTwo />
         </>
     );
 }
