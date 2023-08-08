@@ -7,15 +7,17 @@ import DataFetching from './src/usereducer_axios/DataFetching';
 import DataFetchingTwo from './src/usereducer_axios/DataFetchingTwo';
 import MemoCounter from './src/usememo/MemoCounter';
 import CallbackCounter from './src/usecallback/CallbackCounter';
+import RefCounter from './src/useref/RefCounter';
 
 const App = () => {
     return (
         <>
-            {/* <GlobalScopApp /> */}
+            <GlobalScopApp />
             {/* <DataFetching /> */}
             {/* <DataFetchingTwo /> */}
             {/* <MemoCounter /> */}
-            <CallbackCounter />
+            {/* <CallbackCounter /> */}
+            {/* <RefCounter /> */}
         </>
     );
 }

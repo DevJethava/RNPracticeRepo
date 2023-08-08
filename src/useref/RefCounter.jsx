@@ -1,25 +1,28 @@
-import React, { useCallback, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import {
+    Button,
     SafeAreaView,
     StatusBar,
     StyleSheet,
+    Text,
     View,
 } from 'react-native';
-import Counter from './Counter';
-import MyButton from './MyButton';
 
-const CallbackCounter = () => {
+const RefCounter = () => {
 
-    const [counterOne, setCounterOne] = useState(0)
-    const [counterTwo, setCounterTwo] = useState(0)
+    const [timer, setTimer] = useState(0)
 
-    const incrementCounterOne = useCallback(() => {
-        setCounterOne(counterOne + 1)
-    }, [counterOne])
+    const intervalRef = useRef()
 
-    const incrementCounterTwo = useCallback(() => {
-        setCounterTwo(counterTwo + 1)
-    }, [counterTwo])
+    useEffect(() => {
+        intervalRef.current = setInterval(() => {
+            setTimer(prevTimer => prevTimer + 1)
+        }, 1000)
+
+        return () => {
+            clearInterval(intervalRef.current)
+        }
+    }, [])
 
     return (
         <SafeAreaView style={styles.container}>
@@ -27,10 +30,8 @@ const CallbackCounter = () => {
                 barStyle={'dark-content'}
             />
             <View style={[styles.container, { justifyContent: 'center', alignItems: 'center' }]}>
-                <Counter id={"One"} count={counterOne} />
-                <MyButton id={"One"} onPress={incrementCounterOne} title='Counter One' />
-                <Counter id={"Two"} count={counterTwo} />
-                <MyButton id={"Two"} onPress={incrementCounterTwo} title='Counter Two' />
+                <Text>Count Timer - {timer}</Text>
+                <Button title='Clear Hook Timer' onPress={() => clearInterval(intervalRef.current)} />
             </View>
         </SafeAreaView>
     );
@@ -59,4 +60,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default CallbackCounter;
+export default RefCounter;
