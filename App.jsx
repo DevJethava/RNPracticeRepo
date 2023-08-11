@@ -3,21 +3,23 @@ import {
     StyleSheet,
 } from 'react-native';
 import GlobalScopApp from './src/globalscop/GlobalScopApp';
-import DataFetching from './src/usereducer_axios/DataFetching';
-import DataFetchingTwo from './src/usereducer_axios/DataFetchingTwo';
 import MemoCounter from './src/usememo/MemoCounter';
 import CallbackCounter from './src/usecallback/CallbackCounter';
 import RefCounter from './src/useref/RefCounter';
+import DataFetching from './src/typescript_demo/usereducer_axios/DataFetching';
+import DataFetchingTwo from './src/typescript_demo/usereducer_axios/DataFetchingTwo';
 
 const App = () => {
     return (
         <>
-            <GlobalScopApp />
+            {/* <GlobalScopApp /> */}
             {/* <DataFetching /> */}
             {/* <DataFetchingTwo /> */}
             {/* <MemoCounter /> */}
             {/* <CallbackCounter /> */}
             {/* <RefCounter /> */}
+            {/* <DataFetching /> */}
+            <DataFetchingTwo />
         </>
     );
 }
