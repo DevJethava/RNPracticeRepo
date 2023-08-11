@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import { View, Text } from 'react-native'
 import { ThemeContextProvider } from './ThemeContext'
 import Box from './Box'
 
